@@ -46,3 +46,17 @@ find the index number of var{object}
 Object.is(headSelect, );
 
 head.agi + neck.agi + shoulder.agi etc etc
+
+
+
+////////////////////////////
+Declare and alculate initial totals
+write initiaal values to html
+/////////////////////////////
+On click call "refresh"
+	-inside refresh function calculate total stats of all stats?
+	-also rewrite new values to html
+
+
+-Save different sets and compare them at bottom for easy view
+-add enchants
