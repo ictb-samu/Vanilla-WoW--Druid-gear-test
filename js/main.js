@@ -492,12 +492,12 @@ let critChance =
 let dps = baseDps + attackPower / 14;
 
 //Insert initial html
-document.getElementById("dps").innerHTML = "DPS: " + dps;
+document.getElementById("dps").innerHTML = "DPS: " + Math.round(dps);
 document.getElementById("ap").innerHTML = "Attack power: " + attackPower;
 document.getElementById("health").innerHTML = "Health: " + health;
 document.getElementById("mana").innerHTML = "Mana: " + mana;
 document.getElementById("crit").innerHTML = "Crit chance: " + critChance + "%";
-document.getElementById("hit").innerHTML = "Hit: " + hitChance;
+document.getElementById("hit").innerHTML = "Hit: " + hitChance + "%";
 document.getElementById("agi").innerHTML = "Agility: " + agility;
 
 // Get the current selection values and then do the calculations whenever selection is changed
@@ -647,13 +647,14 @@ function updateSelection() {
     trinket2.crit;
   dps = baseDps + attackPower / 14;
   // Change the html
-  document.getElementById("dps").innerHTML = "DPS: " + dps;
-  document.getElementById("ap").innerHTML = "Attack power: " + attackPower;
+  document.getElementById("dps").innerHTML = "DPS: " + Math.round(dps);
+  document.getElementById("ap").innerHTML =
+    "Attack power: " + Math.round(attackPower);
   document.getElementById("health").innerHTML = "Health: " + health;
   document.getElementById("mana").innerHTML = "Mana: " + mana;
   document.getElementById("crit").innerHTML =
-    "Crit chance: " + critChance + "%";
-  document.getElementById("hit").innerHTML = "Hit: " + hitChance;
+    "Crit chance: " + Math.round(critChance) + "%";
+  document.getElementById("hit").innerHTML = "Hit: " + hitChance + "%";
   document.getElementById("agi").innerHTML = "Agility: " + agility;
   // console log....
   console.log(headSelect);

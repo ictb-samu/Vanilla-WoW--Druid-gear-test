@@ -1,0 +1,27 @@
+select {
+  width: 200px;
+  display: block;
+}
+
+.container {
+  max-width: 500px;
+  height: 500px;
+}
+
+.item-select {
+  width: 200px;
+  height: 100%;
+  margin: 0px;
+  float: left;
+}
+
+.total-stats {
+  width: 150px;
+  position: sticky;
+  float: right;
+  overflow-x: hidden;
+}
+
+.total-stats p {
+  display: block;
+}
