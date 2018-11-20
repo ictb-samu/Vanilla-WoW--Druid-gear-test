@@ -1,0 +1,39 @@
+-talent import from wowhead ?
+	-or atleast select spec
+
+-view total stats for human, cat and bear forms
+	-ravage, fb(5cp 100e), claw, shred, maul dmg
+
+
+
+
+-database of all the items and their stats
+-get option value id
+-check option value id and compare it to database variable names
+-let itemslot values be copy of the comparison = true values (from the one variable that name is equal to the option value id
+-calculate all itemslot values together and combine them
+-multiply with default multiplier (druid form multiplyer, ie 20agi=1crit etc)
+
+
+neckItem["prestors"].agi + headItem["r13Head"].agi;
+DO THIS FOR ALL PROPERTIES
+
+
+
+get headItems value based on headOption value and make new variable from it
+
+
+function checkH
+
+
+if headItems["%"] === headSelect
+
+get headItems["that which has same name as headSelect value"];
+
+
+Object.getOwnPropertyNames(headItems)
+Object.getOwnPropertyNames(headItems.headItemName)
+
+if object property name is equal to x then get those property values
+
+if object property name is equal to headSelect then get that objects values values
