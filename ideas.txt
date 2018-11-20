@@ -37,3 +37,12 @@ Object.getOwnPropertyNames(headItems.headItemName)
 if object property name is equal to x then get those property values
 
 if object property name is equal to headSelect then get that objects values values
+
+
+give multiple values to select option from html?
+
+find the index number of var{object}
+
+Object.is(headSelect, );
+
+head.agi + neck.agi + shoulder.agi etc etc

@@ -19,15 +19,15 @@
   </select>
 
   <p>Neck:</p>
-  <select id="neck">
+  <select id="neck" onchange="getNeckOption();">
     <option value="prestors">78.0DPS | Prestor's Talisman of Connivery | 1% Hit</option>
-    <option>70.0DPS | Stormrage's Talisman of Seething</option>
+    <option value="stormragesTalisman">70.0DPS | Stormrage's Talisman of Seething</option>
     <option>62.2DPS | Onyxia Tooth Pendant (1%)</option>
   </select>
 
   <p>Shoulder:</p>
   <select id="shoulder">
-    <option>101.4	Mantle of Wicked Revenge</option>
+    <option value={wicked}>101.4	Mantle of Wicked Revenge</option>
     <option>65.4	Genesis Shoulderpads</option>
     <option>63.0	R13 Shoulders</option>
   </select>

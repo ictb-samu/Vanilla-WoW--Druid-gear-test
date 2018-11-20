@@ -4,27 +4,53 @@ let headSelect = document.getElementById("head");
 let headOption = head.options[head.selectedIndex].value;
 */
 
+// Head item database below
+let headItems = { 
+  r13Head: {arm: 192, ap: 0, str: 20, agi: 19, sta: 19, int: 15, crit: 1.0, sp: 18},
+  genesisHelm: {arm: 192, ap: 0, str: 15, agi: 12, sta: 22, int: 22, crit: 1.0, sp: 27}
+};
+// Neck item database
+let neckItems = {
+  prestors: {arm: 0, ap: 0, str: 0, agi: 30, sta: 0, int: 0, crit: 0, sp: 0},
+  stormragesTalisman: {arm: 0, ap: 26, str: 0, agi: 0, sta: 12, int: 0, crit: 2, sp: 0}
+};
+
+
 // Get head item and change it based on selection
 // print for test purpose
 let headSelect = document.getElementById("head").value;
+let head = headItems[headSelect];
 function getHeadOption() {
   headSelect = document.getElementById("head").value;
+  head = headItems[headSelect];
   console.log(headSelect);
+  console.log(head);
 }
 
-// Head item database below
-let headItems = { 
-    r13Head: {arm: 192, str: 20, agi: 19, sta: 19, int: 15, crit: 1.0, sp: 18},
-    genesisHelm: {arm: 192, str: 15, agi: 12, sta: 22, int: 22, crit: 1.0, sp: 27}
+// Get neck item and change it based on selection
+// print for test purpose
+let neckSelect = document.getElementById("neck").value;
+let neck = neckItems[neckSelect];
+function getNeckOption() {
+  neckSelect = document.getElementById("neck").value;
+  neck = neckItems[neckSelect];
+  console.log(neckSelect);
+  console.log(neck);
 }
 
+console.log(neck);
+console.log(head);
+
+let agility = neck.agi + head.agi;
+let critChance = agility / 20 + neck.crit + head.crit;
+
+console.log(agility);
+console.log(critChance);
+/* This code maybe obsolete soon
 
 let neckSelect = document.getElementById("neck");
 let neckOption = neck.options[neck.selectedIndex].value;
-// Neck item database
-let neckItems = {
-    prestors: {arm: 0, str: 0, agi: 30, sta: 0, int: 0, crit: 0, sp: 0}
-}
+*/
 
 
 
