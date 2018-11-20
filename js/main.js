@@ -1,31 +1,80 @@
-/*
-// Get head item selection from html
-let headSelect = document.getElementById("head");
-let headOption = head.options[head.selectedIndex].value;
-*/
-
 // Helmets
 let headItems = { 
-  r13Head: {arm: 192, ap: 0, str: 20, agi: 19, sta: 19, int: 15, crit: 1.0, sp: 18, scrit: 0, spirit: 0},
-  genesisHelm: {arm: 192, ap: 0, str: 15, agi: 12, sta: 22, int: 22, crit: 1.0, sp: 27, scrit: 0, spirit: 0}
+  pvpEpicHead: {arm: 192, ap: 0, str: 20, agi: 19, sta: 19, int: 15, crit: 1, hit: 0, sp: 18},
+  genesisHelm: {arm: 192, ap: 0, str: 15, agi: 12, sta: 22, int: 22, crit: 1, hit: 0, sp: 27}
 };
-
 // Necklaces
 let neckItems = {
-  prestors: {arm: 0, ap: 0, str: 0, agi: 30, sta: 0, int: 0, crit: 0, sp: 0, scrit: 0, spirit: 0},
-  stormragesTalisman: {arm: 0, ap: 26, str: 0, agi: 0, sta: 12, int: 0, crit: 2, sp: 0, scrit: 0, spirit: 0}
+  prestors: {arm: 0, ap: 0, str: 0, agi: 30, sta: 0, int: 0, crit: 0, hit: 0, sp: 0},
+  stormragesTalisman: {arm: 0, ap: 26, str: 0, agi: 0, sta: 12, int: 0, crit: 2, hit: 1, sp: 0}
 };
 
 // Shoulders
 let shoulderItems = {
-  wickedRev: {arm: 1, ap: 2, str: 3, agi: 4, sta: 5, int: 6, crit: 7, sp: 8, scrit: 0, spirit: 0}
+  wickedRev: {arm: 170, ap: 0, str: 16, agi: 30, sta: 14, int: 0, crit: 0, hit: 0, sp: 0},
+  genesisShoulder: {arm: 0, ap: 26, str: 0, agi: 0, sta: 12, int: 0, crit: 2, hit: 0, sp: 0}
 };
 
+//Cloaks
+let backItems = {
+  cloakOfTheFallenGod: {arm: 66, ap: 0, str: 11, agi: 26, sta: 15, int: 0, crit: 0, hit: 0, sp: 0},
+  cloakOfConcentratedHatred: {arm: 56, ap: 0, str: 11, agi: 16, sta: 15, int: 0, crit: 0, hit: 1, sp: 0}
+};
+
+//Chests
+let chestItems = {
+  ghoulSkinTunic: {arm: 411, ap: 0, str: 40, agi: 0, sta: 22, int: 0, crit: 2, hit: 0, sp: 0},
+  pvpEpicChest: {arm: 260, ap: 0, str: 25, agi: 14, sta: 19, int: 13, crit: 1, hit: 0, sp: 21},
+  genesisVest: {arm: 253, ap: 0, str: 13, agi: 12, sta: 24, int: 24, crit: 1, hit: 0, sp: 28}
+};
+
+//Bracers
+let wristItems = {
+  qirajiExecutionBracers: {arm: 103, ap: 0, str: 15, agi: 16, sta: 14, int: 0, crit: 0, hit: 1, sp: 0}
+};
+
+//Gloves
+let glovesItems = {
+  glovesOfEnforcement: {arm: 140, ap: 0, str: 28, agi: 20, sta: 6, int: 0, crit: 0, hit: 1, sp: 0},
+  pvpEpicGloves: {arm: 173, ap: 0, str: 20, agi: 19, sta: 15, int: 0, crit: 0, hit: 0, sp: 12}
+};
+
+//Belts
+let beltItems = {
+  beltOfNeverEndingAgony: {arm: 142, ap: 64, str: 0, agi: 0, sta: 20, int: 0, crit: 1, hit: 1, sp: 0}
+};
+
+//Legs
+let legsItems = {
+  leggingsOfApocalypse: {arm: 211, ap: 0, str: 15, agi: 31, sta: 23, int: 0, crit: 2, hit: 0, sp: 0},
+  pvpEpicLegs: {arm: 216, ap: 0, str: 24, agi: 18, sta: 18, int: 15, crit: 1, hit: 0, sp: 0}
+};
+
+//Boots
+let feetItems = {
+  bootsOfTheVanguard: {arm: 138, ap: 0, str: 22, agi: 22, sta: 11, int: 0, crit: 0, hit: 0, sp: 0},
+  bootsOfTheShadowFlame: {arm: 286, ap: 44, str: 0, agi: 0, sta: 22, int: 0, crit: 0, hit: 2, sp: 0}
+};
+
+//Rings
+let ringItems = {
+  bandOfUnnaturalForces: {arm: 0, ap: 52, str: 0, agi: 0, sta: 0, int: 0, crit: 1, hit: 1, sp: 0},
+  circleOfAppliedForce: {arm: 0, ap: 0, str: 12, agi: 22, sta: 9, int: 0, crit: 0, hit: 0, sp: 0}
+};
+
+//Trinkets
+let trinketItems = {
+  drakeFangTalisman: {arm: 0, ap: 56, str: 0, agi: 0, sta: 0, int: 0, crit: 0, hit: 2, sp: 0},
+  slayersCrest: {arm: 0, ap: 64, str: 0, agi: 0, sta: 0, int: 0, crit: 0, hit: 0, sp: 0}
+};
+
+/* Template item database
 // 
 let Items = {
-  : {arm: , ap: , str: , agi: , sta: , int: , crit: , sp: },
-  : {arm: , ap: , str: , agi: , sta: , int: , crit: , sp: }
+  : {arm: , ap: , str: , agi: , sta: , int: , crit: , hit: , sp: },
+  : {arm: , ap: , str: , agi: , sta: , int: , crit: , hit: , sp: }
 };
+*/
 
 let headSelect, neckSelect, shoulderSelect, backSelect, chestSelect, wristSelect, glovesSelect,
     beltSelect, legsSelect, feetSelect, ring1Select, ring2Select, trinket1Select, trinket2Select;
@@ -55,10 +104,10 @@ let head, neck, shoulder, back, chest, wrist, gloves, belt, legs, feet, ring1, r
     belt = beltItems[beltSelect];
     legs = legsItems[legsSelect];
     feet = feetItems[feetSelect];
-    ring1 = ring1Items[ring1Select];
-    ring2 = ring2Items[ring2Select];
-    trinket1 = trinket1Items[trinket1Select];
-    trinket2 = trinket2Items[trinket2Select];
+    ring1 = ringItems[ring1Select];
+    ring2 = ringItems[ring2Select];
+    trinket1 = trinketItems[trinket1Select];
+    trinket2 = trinketItems[trinket2Select];
 
 agility = neck.agi + head.agi;
 critChance = agility / 20 + neck.crit + head.crit;
