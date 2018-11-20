@@ -491,6 +491,15 @@ let critChance =
   trinket2.crit;
 let dps = baseDps + attackPower / 14;
 
+//Insert initial html
+document.getElementById("dps").innerHTML = "DPS: " + dps;
+document.getElementById("ap").innerHTML = "Attack power: " + attackPower;
+document.getElementById("health").innerHTML = "Health: " + health;
+document.getElementById("mana").innerHTML = "Mana: " + mana;
+document.getElementById("crit").innerHTML = "Crit chance: " + critChance + "%";
+document.getElementById("hit").innerHTML = "Hit: " + hitChance;
+document.getElementById("agi").innerHTML = "Agility: " + agility;
+
 // Get the current selection values and then do the calculations whenever selection is changed
 function updateSelection() {
   // Get the current values
